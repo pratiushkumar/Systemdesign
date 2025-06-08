@@ -46,7 +46,6 @@ interface Persistence {
 
    //abstarct method in java
      void save(Shoppingcart4 cart);
-
 }
 
 class Mongodb implements Persistence {
@@ -70,7 +69,7 @@ public class OCPresolved {
 //        Persistence file  = new FilePersistence();
 
 //        db.save(cart);    // Save to SQL database
-        mongo.save(cart); // Save to MongoDB
+        mongo.save(2000); // Save to MongoDB
 //        file.save(cart);  // Save to File
     }
 }

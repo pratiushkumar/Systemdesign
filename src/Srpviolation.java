@@ -6,14 +6,15 @@ class Product {
     public int Price;
     public int quantity;
 
-    public Product(String Productname, int Price, int quantity) {
+    public Product(String Productname, int Price) {
         this.Productname = Productname;
         this.Price = Price;
         this.quantity = quantity;
     }
 
-    // Added toString() method for better display
+//     Added toString() method for better display
     @Override
+
     public String toString() {
         return "Product: " + Productname + ", Price: $" + Price + ", Quantity: " + quantity;
     }
@@ -27,9 +28,9 @@ class ShoppingCart {
         Products = new ArrayList<>();
     }
 
-    // Fixed: Only add one product per call
+
     public void addProduct(String Productname, int Price, int quantity) {
-        Product p = new Product(Productname, Price, quantity);
+        Product p = new Product(Productname, Price);
         Products.add(p);
         System.out.println("Added: " + p);
     }
@@ -75,7 +76,7 @@ public class Srpviolation {
         System.out.println("\nFinal cart:");
         sc.displaycart();
 
-        System.out.println("Total Price: $" + sc.getTotalPrice());
+        System.out.println("Total Price: Rs" + sc.getTotalPrice());
 
         // Fixed: Call getall() on the object, not the class
         ArrayList<Product> allProducts = sc.getall();

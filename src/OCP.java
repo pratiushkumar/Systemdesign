@@ -72,5 +72,6 @@ public static void main(String[] args) {
     in.invoicecalc();
     shoppingcartStorage store =new shoppingcartStorage(sc);
     store.mongodb();
+    store.mysql();
 }
 }
