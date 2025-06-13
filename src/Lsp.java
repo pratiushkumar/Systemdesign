@@ -91,6 +91,7 @@ class Client {
             acc.deposit(1000);
             // ... rest of code
 
+
             try {
                 acc.withdraw(500);
             } catch (UnsupportedOperationException e) {
